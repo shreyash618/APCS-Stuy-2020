@@ -1,0 +1,10 @@
+The difference between using double buffering and not using it with the PlotFilter program 
+is in how quickly the points are displayed on the canvas. When I ran the program without enabling double
+buffering, the program took longer to plot the points, as it was plotting them individually. Also, since the
+points were plotted individually, it seemed like the screen was changing (like in a animation), as points popped
+up on the screen to make a map of the US.
+
+But with double buffering, the points were first plotted to a offscreen canvas, and then copied altogether as
+a whole to the onscreen canvas (which is the display we see) in very little time. Therefore, when I enabled double 
+bufferingand ran the program, I immediately got a canvas with all the points from USA.txt plotted at once. Double 
+buffering reduced plotting time and displayed the end result without any sort of animation. 

@@ -1,0 +1,21 @@
+/* Takes a one dimensional string array and reverse it */
+/* You must enter n (the number of elements in the string) and all the elements of the string */
+public class reverseString {
+    public static void main (String [] args) {
+	int n = Integer.parseInt (args [0]);
+	String [] arr = new String [n];
+	for (int i = 0; i < n; i ++) {
+	    arr [i] = args [i + 1];
+	}
+	/*{"cat", "dog", "mouse", "bird", "owl", "kangaroo", "bear", "tiger", "penguin"};*/
+	for (int i = 0; i < (n/2) - ((n-1)%2); i ++) {
+	    String start = arr [i];
+	    String end = arr [n - i - 1];
+	    arr[i] = end;
+	    arr[n - i - 1] = start;
+	}
+	for (int i = 0; i < n - 1; i ++) {
+	    System.out.println (arr[i]);
+	}
+    }
+}

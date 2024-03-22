@@ -1,0 +1,17 @@
+1. Given two vectors,v1 and v2, of length n that are represented with
+   one-dimensional arrays, write a code fragment that computes the Euclidean
+   distance between them (the square root of the sums of the squares of the
+   differences between corresponding element).
+
+   double [] v1 = < value not shown> ;
+   double [] v2 = < value not shown> ;
+   
+   //My code fragment
+   
+   for (int j=0; j<n; j++)
+            sum += Math.pow ((v2[j]-v1[j]), 2.0);
+   double Fvalue = Math.sqrt (sum);
+   System.out.println (Fvalue);
+
+   Fvalue is the Euclidean distance between vector v1 and vector v2. My code computes the vectors' value difference in each dimension. It squares these differences and adds them all up together, then finds the square root of the sum to give the Euclidean distance.
+   
